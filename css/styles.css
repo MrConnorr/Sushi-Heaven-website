@@ -1,0 +1,440 @@
+body
+{
+  background-image: url("../images/bg.jpg");
+  position: relative;
+  font-family: 'Poor Richard', Arial, Helvetica, sans-serif;
+}
+
+body::after
+{
+  content: "";
+  background-color: white;
+  opacity: 0.9;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
+}
+
+.container-main
+{
+  text-align: center;
+
+  min-height: 100vh;
+  display: block;
+  position: relative;
+  padding-bottom: 480px;
+}
+
+.toggler-btn
+{
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 15px;
+}
+
+.navbar-flex
+{
+  overflow: hidden;
+  background-color: black;
+  position: relative;
+}
+
+.navbar-flex #hidden-menu
+{
+  display: none;
+}
+
+
+.navbar-flex a
+{
+  text-decoration: none;
+  color: #FFE817;
+
+  font-size: 24px;
+}
+
+.unactive
+{
+  opacity: 0.5;
+}
+
+.unactive:hover
+{
+  opacity: 0.8;
+}
+
+.navbar-flex li
+{
+    list-style-type: none;
+}
+
+.navbar-flex .brand-icon
+{
+  width: 10%;
+  height: auto;
+  display: block;
+}
+
+.navbar-flex .brand-text
+{
+  font-size: 18px;
+}
+
+
+.navbar-flex .lang-icons
+{
+  width: 64px;
+  height: auto;
+
+  padding: 5px;
+}
+
+.navbar-flex .lang-selector
+{
+  margin-left: 10px;
+}
+
+.img-slider
+{
+  display: none;
+}
+
+.info-restaurant
+{
+  margin-top: 10px;
+}
+
+.info-restaurant img
+{
+  border-radius: 10px;
+}
+
+.info-restaurant p
+{
+  text-align: left;
+  font-size: 20px;
+}
+
+
+.general-info
+{
+  margin-top: 150px;
+  text-align: left;
+
+  width: 100%;
+
+  background-color: black;
+  color:#FFE817;
+
+  display: flex;
+  align-items: center;
+
+  padding: 50px;
+}
+
+.general-info p
+{
+  font-size: 20px;
+}
+
+.general-info img
+{
+  width: 65px;
+  height: 63px;
+
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.general-info .hours-info
+{
+  margin-top: 5px;
+  text-align: center !important;
+  font-size: 18px;
+}
+
+
+.partners
+{
+  color:#FFE817;
+  background-color: black;
+  margin-top: 150px;
+
+  padding: 30px;
+}
+
+.partners h3
+{
+  padding-bottom: 15px;
+}
+
+.partners img
+{
+  width: 220px;
+  height: auto;
+
+  align-self: flex-start;
+
+  border-radius: 10px;
+}
+
+.partners li
+{
+  display: inline-flex;
+  padding: 20px;
+}
+
+.custom-toggler .navbar-toggler-icon
+{
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgb(255, 232, 23)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+.custom-toggler.navbar-toggler {
+  border-color: #FFE817;
+}
+
+
+
+
+@media all and (min-width: 960px)
+{
+
+/* Navbar */
+.navbar-flex
+{
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  background-color: black;
+
+  align-items: center;
+}
+
+.navbar-flex #hidden-menu
+{
+  display: inline-flex;
+}
+
+.toggler-btn
+{
+  display: none;
+}
+
+.navbar-flex ul
+{
+  padding-left: 150px;
+  justify-content: center;
+}
+
+.navbar-flex a
+{
+  text-decoration: none;
+  color: #FFE817;
+
+  font-size: 48px;
+}
+
+.navbar-flex a:hover
+{
+  color:#cccc11;
+}
+
+.non-active
+{
+  color: rgba(255, 232, 23, 0.43) !important;
+}
+
+.non-active:hover
+{
+    color:#e5e500 !important;
+}
+
+.navbar-flex li
+{
+    padding-right: 75px;
+    padding-left: 75px;
+
+    display: inline-flex;
+    font-size: 36px;
+}
+
+.lang-icons
+{
+  width: 60px;
+  height: 60px;
+  padding: 10px;
+}
+
+.navbar-flex .lang-selector
+{
+  padding-left: 50px;
+}
+
+.lang-links
+{
+  padding:0 !important;
+}
+
+.navbar-flex .brand-icon
+{
+  width: 100%;
+  height: 100%;
+
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.brand-text
+{
+  color: #FFE817 !important;
+}
+
+/* Navbar */
+
+.welcome
+{
+  display: flex;
+
+  top: 30vh;
+  left: 20vh;
+
+  flex-direction: column;
+  align-items: center;
+
+  position: absolute;
+  color: white;
+  z-index: 20;
+
+  text-shadow: 8px 10px 5px black;
+
+}
+
+.welcome h1
+{
+  font-size: 64px;
+}
+
+.welcome p
+{
+    font-size: 24px;
+}
+
+.welcome .btn
+{
+  background-color: #212529;
+  color: #FFE817;
+  margin-bottom: 100px;
+  border-radius: 10px;
+  border-color: #212529;
+
+  box-shadow: 1px 1px 8px white;
+}
+
+.welcome .btn:hover
+{
+  background-color: black;
+  color:white;
+}
+
+.carousel img
+{
+  transform: scale(1.1); /* Removing blured edges*/
+
+  filter: blur(5px);
+  -webkit-filter: blur(5px);
+}
+
+.carousel-inner
+{
+    filter: brightness(50%);
+    height: 90vh;
+}
+
+.img-slider
+{
+  display: block;
+}
+
+.info-restaurant
+{
+  margin-top: 150px !important;
+}
+
+.partners li
+{
+  padding: 10px;
+}
+
+.container-main
+{
+  padding-bottom: 350px;
+}
+
+footer .social-media-icons
+{
+  padding-top: 5px;
+}
+
+}
+
+/* Footer */
+
+footer
+{
+  background-color: white;
+  text-align: center;
+
+  padding-top: 20px;
+
+  position: absolute;
+
+  width: 100%;
+  bottom: 0;
+
+  border-top: 3px solid black;
+}
+
+footer .social-media-icons
+{
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-right: 45px;
+}
+
+footer li
+{
+  display: inline-flex;
+}
+
+footer img
+{
+  width: 42px;
+  height: 43px;
+}
+
+footer .tripadvisor
+{
+  width: 230px !important;
+  height: 30px !important;
+  padding-left: 40px;
+}
+
+footer p
+{
+  font-size: 18px;
+}
+
+.copyright
+{
+  text-align: center;
+
+  font-family: Arial;
+}
+
+/* Footer */
