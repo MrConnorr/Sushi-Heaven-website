@@ -1,0 +1,116 @@
+
+<?php include 'header.php' ?>
+      <div class="img-slider">
+
+        <div class="welcome">
+          <h1>Welcome to Sushi Heaven</h1>
+          <p>Best sushi in town made with love</p>
+          <a href="#scroll-target" type="button" class="btn">Learn More</a>
+        </div>
+
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+          <ol class="carousel-indicators">
+            <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"></li>
+            <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"></li>
+            <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"></li>
+            <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"></li>
+            <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4"></li>
+          </ol>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="images/slider-image1.jpg" class="d-block w-100 img-fluid" alt="Sushi Img For Slider 1">
+            </div>
+            <div class="carousel-item">
+              <img src="images/slider-image2.jpg" class="d-block w-100 img-fluid" alt="Sushi Img For Slider 2">
+            </div>
+            <div class="carousel-item">
+              <img src="images/slider-image3.jpg" class="d-block w-100 img-fluid" alt="Sushi Img For Slider 3">
+            </div>
+            <div class="carousel-item">
+              <img src="images/slider-image4.jpg" class="d-block w-100 img-fluid" alt="Sushi Img For Slider 4">
+            </div>
+            <div class="carousel-item">
+              <img src="images/slider-image5.jpg" class="d-block w-100 img-fluid" alt="Sushi Img For Slider 5">
+            </div>
+          </div>
+          <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </a>
+        </div>
+
+      </div>
+
+
+        <div class="container-fullwidth container-main">
+          <!--Write your code here-->
+
+          <article id="scroll-target">
+            <div class="container">
+              <div class="row info-restaurant">
+                <div class="col-lg-6">
+                  <h1>Sushi Heaven is about Sushi</h1>
+                  <p>
+                    "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"
+                  </p>
+                </div>
+                <div class="col-lg-6">
+                  <img src="images/restaurant-img.jpg" alt="Image of Restaurant inside" class="img-fluid">
+                </div>
+              </div>
+            </div>
+          </article>
+
+
+          <div class="general-info">
+            <div class="container">
+              <div class="row">
+                <div class="col-md-6">
+                  <h2>Buffet</h2>
+                  <p>
+                    Info about buffet
+                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+                  </p>
+                  <img src="images/opening-icon.png" alt="Icon for Opening Hours" class="img-fluids">
+                  <p class="hours-info">
+                    Opening Hours <br>
+                    Mon-Fri: 09:00 - 21:00 <br>
+                    Sat: 11:00 - 23:00 <br>
+                    Sun: Closed
+                  </p>
+                </div>
+                <div class="col-md-6">
+                  <h2>Delivery</h2>
+                  <p>
+                    Info about delivery
+                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+                  </p>
+                  <img src="images/delivery-icon.png" alt="Delivery Icon" class="img-fluid">
+                  <p class="hours-info">
+                    Delivery working Hours <br>
+                    Mon-Fri: 10:00 - 20:00 <br>
+                    Sat: 12 :00 - 22:00 <br>
+                    Sun: Closed
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+            <div class="partners">
+                <h3>Our Partners</h3>
+                <div class="container">
+                  <li><img src="images/partner-img1.jpg" alt="Wolt Partner Image" class="img-fluid"></li>
+                  <li><img src="images/partner-img2.jpg" alt="Hotel Partner Image" class="img-fluid"></li>
+                  <li><img src="images/partner-img3.jpg" alt="Spa Partner Image" class="img-fluid"></li>
+                  <li><img src="images/partner-img4.jpg" alt="Fishin Company Partner Image" class="img-fluid"></li>
+                  <li><img src="images/partner-img5.jpg" alt="Sports Center Partner Image" class="img-fluid"></li>
+              </div>
+            </div>
+          </div>
+
+ <?php include 'footer.php' ?>
