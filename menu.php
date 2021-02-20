@@ -2,6 +2,36 @@
 
 <link rel="stylesheet" href="css/menu.css">
 
+<style>
+    .fal, .fas{
+        margin-right: 8px;
+        cursor: pointer;
+    }
+    .star{
+        margin-left: 300px; display: flex; justify-content: end;
+    }
+    #message{
+        font-size: 24px;
+        font-weight: 500;
+        margin-top: -10px;
+    }
+    #message2{
+        font-size: 24px;
+        font-weight: 500;
+        margin-top: -10px;
+    }
+    #message3{
+        font-size: 24px;
+        font-weight: 500;
+        margin-top: -10px;
+    }
+    #message4{
+        font-size: 24px;
+        font-weight: 500;
+        margin-top: -10px;
+    }
+</style>
+
         <div class="container container-main">
             <div class="row top-buffer">
                 <div class="col-md-3">
@@ -30,6 +60,14 @@
                             Red Salmon 7pcs<br>
                             Grilled Red Salmon 7pcs</p>
                         </div>
+                        <div class="col-sm-12 star">
+                            <i class="fas fa-star" id="iStar1" onclick="ckeckStar1()"></i>
+                            <i class="fas fa-star" id="iStar2" onclick="ckeckStar2()"></i>
+                            <i class="fas fa-star" id="iStar3" onclick="ckeckStar3()"></i>
+                            <i class="fas fa-star" id="iStar4" onclick="ckeckStar4()"></i>
+                            <i class="fas fa-star" id="iStar5" onclick="ckeckStar5()"></i>
+                            <p id="message">0.0</p>
+                        </div>
                     </div>
                     <div class="row menu">
                         <div class="col-sm-6 col-img">
@@ -39,6 +77,14 @@
                             <p>AVOCADO SALMON SET<br>
                             Avocado Salmon 8pcs<br>
                             Grilled Avocado Salmon 7pcs</p>
+                        </div>
+                        <div class="col-sm-12 star">
+                        <i class="fas fa-star" id="iStar21" onclick="ckeckStar21()"></i>
+                            <i class="fas fa-star" id="iStar22" onclick="ckeckStar22()"></i>
+                            <i class="fas fa-star" id="iStar23" onclick="ckeckStar23()"></i>
+                            <i class="fas fa-star" id="iStar24" onclick="ckeckStar24()"></i>
+                            <i class="fas fa-star" id="iStar25" onclick="ckeckStar25()"></i>
+                            <p id="message2">0.0</p>
                         </div>
                     </div>
                     <div class="row menu">
@@ -52,6 +98,14 @@
                             Avocado 2pcs<br>
                             Prawn 2pcs</p>
                         </div>
+                        <div class="col-sm-12 star">
+                            <i class="fas fa-star" id="iStar31" onclick="ckeckStar31()"></i>
+                            <i class="fas fa-star" id="iStar32" onclick="ckeckStar32()"></i>
+                            <i class="fas fa-star" id="iStar33" onclick="ckeckStar33()"></i>
+                            <i class="fas fa-star" id="iStar34" onclick="ckeckStar34()"></i>
+                            <i class="fas fa-star" id="iStar35" onclick="ckeckStar35()"></i>
+                            <p id="message3">0.0</p>
+                        </div>
                     </div>
                     <div class="row menu">
                         <div class="col-sm-6 col-img">
@@ -64,9 +118,17 @@
                             Avocado 2pcs<br>
                             Salmon Roll 6pcs<br>
                         </div>
+                        <div class="col-sm-12 star">
+                            <i class="fas fa-star" id="iStar41" onclick="ckeckStar41()"></i>
+                            <i class="fas fa-star" id="iStar42" onclick="ckeckStar42()"></i>
+                            <i class="fas fa-star" id="iStar43" onclick="ckeckStar43()"></i>
+                            <i class="fas fa-star" id="iStar44" onclick="ckeckStar44()"></i>
+                            <i class="fas fa-star" id="iStar45" onclick="ckeckStar45()"></i>
+                            <p id="message4">0.0</p>
+                        </div>
                     </div>
-                </div>
-                <div class="col-lg-6 border-left">
+                </div>4
+                <div class="col-lg-5 border-left">
                     <div class="row">
                         <p class="prices-text justify-content-center">
                             We are the proud bearers of the millenial sushi tradition. For us, the mission is to provide the authentic and quality experience of Japan to everyone. For that reason, we keep the prices same for each of the sushi sets.
@@ -84,5 +146,5 @@
                 </div>
             </div>
         </div>
-
+<script src="js/menu.js"></script>
 <?php include 'footer.php' ?>

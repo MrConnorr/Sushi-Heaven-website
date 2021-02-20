@@ -10,7 +10,7 @@
                             <h1 class="text-center col-lg-12">
                                 LEARN MORE ABOUT US
                             </h1>
-                            <a href="#" class="col-lg-12 brand-text" style="width: fit-content; font-size: 30px; text-decoration: none;">
+                            <a href="#" class="col-lg-12 brand-text" style="z-index:1; width: fit-content; font-size: 30px; text-decoration: none;">
                                 <img src="images/brand-icon.png" alt="Sushi Heaven Icon" style="width: 60px;
                                 height: auto;"> Sushi Heaven
                             </a>
@@ -26,34 +26,40 @@
                                     width="100%" height="500px" frameborder="0" style="border: 1px solid #111; border-radius: 10px;" tabindex="0"></iframe>
 
                             </div>
-                            <div class="col-md-4   d-flex align-items-center">
-                                <div id="info">
-                                    <div class="myRow">
-                                        <div class="icon">
-                                            <i class="fas fa-map-marker-alt fa-3x"></i>
-                                        </div>
-                                        <div class="content">
-                                            <h2>Our Location</h2>
-                                            <p>Eteläranta 20,<br> 00130 Helsinki, Finland</p>
-                                        </div>
+                            <div class="col-md-4 align-items-center">
+                                <div class="myRow">
+                                    <div class="row">
+                                    <div class="icon col-md-2 mt-3" style="margin-top: 10px">
+                                        <i class="fas fa-map-marker-alt fa-3x"></i>
                                     </div>
-                                    <div class="myRow">
-                                        <div class="icon">
-                                            <i class="fas fa-mobile-alt fa-3x"></i>
-                                        </div>
-                                        <div class="content d-flex align-items-center phone">
-                                            <h2>+358 40210 67 95</h2>
-                                        </div>
+                                    <div class="content col-md-10">
+                                        <h2 style="font-weight: 600;">Our Location:</h2>
+                                        <p>Eteläranta 20, 00130 Helsinki, Finland</p>
                                     </div>
-                                    <div class="myRow">
-                                        <div class="icon">
-                                            <i class="far fa-envelope fa-3x"></i>
-                                        </div>
-                                        <div class="content d-flex align-items-center phone">
-                                            <h2>hello@sushiheaven.fi</h2>
-                                        </div>
                                     </div>
+                                </div>
+                                <div class="myRow">
+                                    <div class="row">
+                                    <div class="icon col-md-2" style="margin-top: 10px">
+                                        <i class="fas fa-mobile-alt fa-3x"></i>
+                                    </div>
+                                    <div class="col-md-10 content">
+                                        <h2 style="font-weight: 600;">Call:</h2>
+                                        <p>+358 40210 67 95</p>
 
+                                    </div>
+                                    </div>
+                                </div>
+                                <div class="myRow">
+                                    <div class="row">
+                                    <div class="icon col-md-2" style="margin-top: 10px">
+                                        <i class="far fa-envelope fa-3x"></i>
+                                    </div>
+                                    <div class="col-md-10 content">
+                                        <h2 style="font-weight: 600;">Email:</h2>
+                                        <p>hello@sushiheaven.fi</p>
+                                    </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>

@@ -1,21 +1,36 @@
 /* About Us section */
 
 #aboutUsBg {
+    position: relative;
+    /* z-index: 1; */
     margin-top: 30px;
     width: 100%;
     height: 200px;
-    background-image: url(../../images/traditional-japanese-food-sushi-rolls-and-chopsticks-for-sushi-top-view.jpg);
+    background-image: url(../images/sushi-rolls.jpg);
     background-position: right;
     background-size: cover;
     color: #fff;
     font-size: 40px;
-    text-align: center;
 }
-
+#aboutUsBg::after{
+    content: "";
+    z-index: 0;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.65);
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+}
+.text-center{
+    z-index: 1;
+    text-align: center;
+    color:#FFE817;
+}
 #blackLayer {
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, .5);
+    /* background-color: rgba(0, 0, 0); */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -24,10 +39,21 @@
 #info {
     height: 350px !important;
 }
-
 .myRow {
     width: 100%;
-    height: 120px;
+    height: auto;
+    margin-bottom: 30px;
+}
+
+.icon i {
+    color: #ECA61E;
+    
+}
+
+/* 
+.myRow {
+    width: 100%;
+    height: auto;
     margin-bottom: 30px;
 }
 
@@ -52,7 +78,7 @@
 
 .phone {
     height: 50px;
-}
+} */
 
 
 /* About Us section end */
@@ -88,3 +114,5 @@
         margin-bottom: 100px;
     }
 }
+
+
