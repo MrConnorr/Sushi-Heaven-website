@@ -1,6 +1,6 @@
 </div>
 <!-- Footer Starts Here -->
-<footer style="background: #000; color:#ffe817;">
+<footer>
   <div class="container">
     <div class="row">
       <address class="col-lg-4">

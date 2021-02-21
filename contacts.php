@@ -1,4 +1,4 @@
- <?php include 'header.php' ?>
+<?php include 'header.php' ?>
 
 <link rel="stylesheet" href="css/contacts.css">
 
@@ -91,11 +91,6 @@
                     </div>
                 </div>
             </div>
-
-            <!--Write your code here-->
-
-
-
         </div>
 
 <?php include 'footer.php' ?>
