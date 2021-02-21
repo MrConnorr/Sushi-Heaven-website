@@ -84,5 +84,4 @@
                 </div>
             </div>
         </div>
-<script src="js/menu.js"></script>
 <?php include 'footer.php' ?>
