@@ -7,6 +7,10 @@
     <link rel="stylesheet" href="css/styles.css">
     <link href="//db.onlinewebfonts.com/c/1333b13c4f911f3160f1c2822573f70c?family=Poor+Richard" rel="stylesheet" type="text/css"/>
 
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    
+
     <title>Sushi Heaven</title>
 
         <!-- default favicon -->

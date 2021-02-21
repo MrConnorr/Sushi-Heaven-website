@@ -66,7 +66,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-6 border-left">
+                <div class="col-lg-5 border-left">
                     <div class="row">
                         <p class="prices-text justify-content-center">
                             We are the proud bearers of the millenial sushi tradition. For us, the mission is to provide the authentic and quality experience of Japan to everyone. For that reason, we keep the prices same for each of the sushi sets.
@@ -84,5 +84,4 @@
                 </div>
             </div>
         </div>
-
 <?php include 'footer.php' ?>
