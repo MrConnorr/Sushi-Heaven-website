@@ -1,3 +1,10 @@
+<?php
+session_start();
+require_once("dbconnect.php");
+$dbHandle = new DBController();
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
