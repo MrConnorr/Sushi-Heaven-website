@@ -131,19 +131,6 @@ body::after
   font-size: 18px;
 }
 
-.comments {
-  margin-top: 150px;
-}
-
-@media screen and (max-width: 766px) {
-  .comments {
-    margin-top: 0px;
-  }
-  .central-form {
-    margin-top: 30px;
-  }
-}
-
 .btn-dark {
   font-family: 'Poor Richard';
   border-radius: 10px;
@@ -230,6 +217,13 @@ body::after
 
 .custom-toggler.navbar-toggler {
   border-color: #FFE817;
+}
+
+.comments {
+  margin-top: 0px;
+}
+.central-form {
+  margin-top: 30px;
 }
 
 
@@ -415,6 +409,10 @@ footer .social-media-icons
   padding-top: 5px;
 }
 
+.comments {
+  margin-top: 150px !important;
+}
+
 }
 
 /* Footer */
@@ -426,7 +424,7 @@ footer
 
   padding-top: 20px;
 
-  position: absolute; 
+  position: absolute;
 
   width: 100%;
   bottom: 0;
