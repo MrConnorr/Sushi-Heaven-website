@@ -119,6 +119,40 @@ body::after
   font-size: 20px;
 }
 
+.cmnt {
+  margin-top: 50px;
+}
+
+.commentfield .comment {
+  font-size: 30px;
+}
+
+.commentfield .name {
+  font-size: 18px;
+}
+
+.comments {
+  margin-top: 150px;
+}
+
+@media screen and (max-width: 766px) {
+  .comments {
+    margin-top: 0px;
+  }
+  .central-form {
+    margin-top: 30px;
+  }
+}
+
+.btn-dark {
+  font-family: 'Poor Richard';
+  border-radius: 10px;
+  color: #FFE817;
+  font-size:24px;
+  width: 220px;
+  margin-top:20px;
+  text-decoration: none;
+}
 
 .general-info
 {
