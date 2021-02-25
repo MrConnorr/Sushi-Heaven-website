@@ -111,6 +111,79 @@
                   <li><img src="images/partner-img5.jpg" alt="Sports Center Partner Image" class="img-fluid"></li>
               </div>
             </div>
+
+          <div class = "comments">
+            <div class="container">
+                <div class="row">
+                  <div class="col-md-4 cmnt">
+                    <div class="commentfield">
+                    <?php
+                    $commentArray = $dbHandle->runQuery("SELECT * FROM comments ORDER BY RAND() LIMIT 1;");
+                    if(!empty($commentArray))
+                    {
+                      foreach ($commentArray as $key => $value)
+                      {
+                    ?>
+                      <p class="comment">
+                        <?php echo "\"" . $commentArray[$key]["userComment"] . "\"";
+                        ?>
+                      </p>
+                      <p class="name">
+                      <?php echo "- " . $commentArray[$key]["userName"];
+                        ?>
+                      </p>
+                      <?php
+                      }
+                      }
+                    ?>
+                    </div>
+                  </div>
+                  <div class="col-md-4 central-form">
+                  <form method="post" action="comment-posting.php">
+                    <div class="form-row">
+                      <div class="col-md-12">
+                        <label for="validationDefault01">Write a short comment</label>
+                        <input type="text" name="userComment" class="form-control" id="validationDefault01" placeholder="Comment" maxlength="140" required>
+                      </div>
+                      <div class="col-md-12">
+                        <label for="validationDefault02">First name</label>
+                        <input type="text" name="userName" class="form-control" id="validationDefault02" placeholder="Your name" maxlength="20" required>
+                      </div>
+                      <div class="col-md-12">
+                      <label for="validationDefault03">E-mail</label>
+                      <input type="email" name="userEmail" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" maxlength="50" placeholder="Enter email" required>
+                      </div>
+                    </div>
+                    <input class="btn btn-dark" type="submit" value="Submit">
+                  </form>
+                  </div>
+                  <div class="col-md-4 cmnt">
+                  <div class="commentfield">
+                  <?php
+                    $commentArray = $dbHandle->runQuery("SELECT * FROM comments ORDER BY RAND() LIMIT 1;");
+                    if(!empty($commentArray))
+                    {
+                      foreach ($commentArray as $key => $value)
+                      {
+                    ?>
+                      <p class="comment">
+                        <?php echo "\"" . $commentArray[$key]["userComment"] . "\"";
+                        ?>
+                      </p>
+                      <p class="name">
+                      <?php echo "- " . $commentArray[$key]["userName"];
+                        ?>
+                      </p>
+                      <?php
+                      }
+                      }
+                    ?>
+                    </div>
+                  </div>
+                </div>
+            </div>
+          </div>
+
           </div>
 
  <?php include 'footer.php' ?>
