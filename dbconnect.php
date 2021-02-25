@@ -28,11 +28,17 @@ class DBController
 			return $resultset;
 	}
 
-function insertQuery($query)
-{
-	$result = mysqli_query($this->conn, $query);
-}
+	function insertQuery($query)
+	{
+		$result = mysqli_query($this->conn, $query);
+	}
 
+	function getQuery($query)
+	{
+		$result = mysqli_query($this->conn, $query);
+		$row=mysqli_fetch_assoc($result);
+		return $row;
+	}
 
 	function numRows($query)
 	{

@@ -1,0 +1,28 @@
+.main-panel
+{
+  display: flex;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+}
+
+.main-panel a
+{
+  margin: 50px;
+  font-size: 30px;
+  background-color: aliceblue;
+}
+
+.table
+{
+  text-align: center;
+  table-layout: fixed;
+  width: 1920px;
+}
+
+.controls
+{
+  padding-bottom: 10px;
+}
