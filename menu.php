@@ -191,9 +191,9 @@
                           <form class="" action="menu.php?action=update&code=<?php echo $item["code"]; ?>" method="post">
                           <td style="text-align:right;"><input type="number" name="quantity" value="<?php echo $item["quantity"]; ?>" min="1" class="productQuantity" /></td>
                         </form>
-                          <td  style="text-align:right;"><?php echo "€ ".$item["price"]; ?></td>
-                          <td  style="text-align:right;"><?php echo "€ ". number_format($item_price,2); ?></td>
-                          <td style="text-align:center;"><a href="menu.php?action=remove&code=<?php echo $item["code"]; ?>" class="btnRemoveAction"><img src="icon-delete.png" alt="Remove Item" /></a></td>
+                          <td  style="text-align:right;"><?php echo $item["price"]. "€"; ?></td>
+                          <td  style="text-align:right;"><?php echo number_format($item_price,2). "€"; ?></td>
+                          <td style="text-align:center;"><a href="menu.php?action=remove&code=<?php echo $item["code"]; ?>" class="btnRemoveAction"><img src="images/icon-delete.png" alt="Remove Item" /></a></td>
                           </tr>
                           <?php
                           $total_quantity += $item["quantity"];
@@ -203,7 +203,7 @@
                   <tr>
                   <td colspan="2" align="right">Total:</td>
                   <td align="right"><?php echo $total_quantity; ?></td>
-                  <td align="right" colspan="2"><strong><?php echo "$ ".number_format($total_price, 2); ?></strong></td>
+                  <td align="right" colspan="2"><strong><?php echo number_format($total_price, 2). "€"; ?></strong></td>
                   <td></td>
                   </tr>
                   </tbody>
