@@ -12,4 +12,7 @@ $sql = "INSERT INTO comments (userName, userComment, userEmail) VALUES('$uName',
 $comment = $dbHandle->insertQuery($sql);
 }
 
+header('Location: index.php');
+exit;
+
 ?>
