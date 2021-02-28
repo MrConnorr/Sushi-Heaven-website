@@ -1,15 +1,12 @@
 <?php
-$servername = "localhost:3307";
-$username = "root";
-$password = "root";
-$dbname = "sushiheaven";
-$conn = new mysqli($servername, $username, $password, $dbname);
-if ($conn->connect_error) {
-  die("Connection failed: " . $conn->connect_error);}
-$a = $_GET['id'];
-$result = mysqli_query($conn,"SELECT * FROM comments WHERE id= '$a'");
-$row= mysqli_fetch_array($result);
+include 'db.php';
+
+$a = $_GET["id"];
+$comment = $dbHandle->getQuery("SELECT * FROM comments WHERE id='$a'");
 ?>
+
+ <a href="adminMenu.php"><img src="../images/back.png" alt="" style="width:50px"></a>
+
 <html>
 <head>
 <title>Update Data</title>
@@ -19,13 +16,13 @@ $row= mysqli_fetch_array($result);
 <div><?php if(isset($message)) { echo $message; } ?>
 </div>
 Comment: <br>
-<input type="text" name="userComment" size="150" value="<?php echo $row['userComment']; ?> ">
+<input type="text" name="userComment" size="150" value="<?php echo $comment['userComment']; ?>" required>
 <br>
-Last Name :<br>
-<input type="text" name="userName" value="<?php echo $row['userName']; ?>">
+User Name :<br>
+<input type="text" name="userName" value="<?php echo $comment['userName']; ?>" required>
 <br>
-City:<br>
-<input type="text" name="userEmail" value="<?php echo $row['userEmail']; ?>">
+User Email:<br>
+<input type="email" name="userEmail" value="<?php echo $comment['userEmail']; ?>" readonly>
 <br>
 
 <input type="submit" name="submit" value="Submit" >
@@ -35,17 +32,15 @@ if(isset($_POST['submit'])){
 
     $uComment = $_POST['userComment'];
     $uName = $_POST['userName'];
-    $uEmail = $_POST['userEmail'];
-    $query = mysqli_query($conn,"UPDATE comments set userComment='$uComment', userName='$uName', userEmail='$uEmail'
-       where id='$a'");
-    if($query){
+    $query = $dbHandle->insertQuery("UPDATE comments set userComment='$uComment', userName='$uName' where id='$a'");
+
+    if(!$query){
         echo "Record Modified Successfully <br>";
         echo "<a href='adminComments.php'> Check your updated List </a>";
-        
+
     }
     else { echo "Record Not modified";}
     }
-$conn->close();
 ?>
 </body>
 </html>
