@@ -26,7 +26,7 @@
 .text-center{
     z-index: 1;
     text-align: center;
-    color:#FFE817;
+    color:#beac07;
 }
 #blackLayer {
     width: 100%;
@@ -92,12 +92,13 @@
     cursor: pointer;
     text-decoration: none;
     background-color: #000;
-    color: #FFE817;
+    color: #FFE600;
+    font-weight: 600;
     transition: all .4s linear;
 }
 
 .submitButton:hover {
-    color: #FFE817;
+    color: #FFE600;
     transform: translateY(-5px);
 }
 
