@@ -28,7 +28,7 @@ if(!empty($comments))
 <td><?php echo $comments[$key]["userComment"]; ?></td>
 <td><?php echo $comments[$key]["userName"]; ?></td>
 <td><?php echo $comments[$key]["userEmail"]; ?></td>
-<td><a href="updateSingleComment.php?id=<?php echo $comments[$key]['id']; ?>">Update</a></td>
+<td><a href="updateSingleComment.php?id=<?php echo $comments[$key]['id']; ?>">Edit</a></td>
 <td><a href="deleteComment.php?id=<?php echo $comments[$key]['id']; ?>">Delete</a></td>
 </tr>
 
