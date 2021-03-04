@@ -5,7 +5,7 @@ $a = $_GET["id"];
 $comment = $dbHandle->getQuery("SELECT * FROM reservations WHERE id='$a'");
 ?>
 
- <a href="adminMenu.php"><img src="../images/back.png" alt="" style="width:50px"></a>
+ <a href="adminReservations.php"><img src="../images/back.png" alt="" style="width:50px"></a>
 
 <html>
 <head>

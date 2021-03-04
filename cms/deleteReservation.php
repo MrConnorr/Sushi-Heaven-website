@@ -5,7 +5,7 @@ $a = $_GET["id"];
 $comment = $dbHandle->getQuery("SELECT * FROM reservations WHERE id= '$a'");
 ?>
 
- <a href="adminMenu.php"><img src="../images/back.png" alt="" style="width:50px"></a>
+ <a href="adminReservations.php"><img src="../images/back.png" alt="" style="width:50px"></a>
 
 <html>
 <head>
@@ -16,25 +16,25 @@ $comment = $dbHandle->getQuery("SELECT * FROM reservations WHERE id= '$a'");
 <div><?php if(isset($message)) { echo $message; } ?>
 </div>
 Name :<br>
-<input type="text" name="userName" value="<?php echo $comment['userName']; ?>" required>
+<input type="text" name="userName" value="<?php echo $comment['userName']; ?>" readonly>
 <br>
 Date:<br>
-<input type="date" name="userDate" value="<?php echo $comment['userDate']; ?>" required>
+<input type="date" name="userDate" value="<?php echo $comment['userDate']; ?>" readonly>
 <br>
 Time: <br>
-<input type="time" name="userTime" value="<?php echo $comment['userTime']; ?>" required>
+<input type="time" name="userTime" value="<?php echo $comment['userTime']; ?>" readonly>
 <br>
 Persons:<br>
-<input type="number" name="userPersons" value="<?php echo $comment['userPersons']; ?>" required>
+<input type="number" name="userPersons" value="<?php echo $comment['userPersons']; ?>" readonly>
 <br>
 Email:<br>
-<input type="email" name="userMail" value="<?php echo $comment['userMail']; ?>" required>
+<input type="email" name="userMail" value="<?php echo $comment['userMail']; ?>" readonly>
 <br>
 Telephone:<br>
-<input type="tel" name="userPhone" value="<?php echo $comment['userPhone']; ?>" required>
+<input type="tel" name="userPhone" value="<?php echo $comment['userPhone']; ?>" readonly>
 <br>
 Notes:<br>
-<input type="text" name="userNotes" value="<?php echo $comment['userNotes']; ?>">
+<input type="text" name="userNotes" value="<?php echo $comment['userNotes']; ?>" readonly>
 <br>
 
 <input type="submit" name="submit" value="Delete" >
