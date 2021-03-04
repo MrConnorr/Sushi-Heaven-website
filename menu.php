@@ -155,8 +155,8 @@
                             Buffet.......................................29.00EUR
                         </p>
                     </div>
-                    <a href="#" class="btn btn-dark" role="button" aria-pressed="true">Wolt Delivery</a>
-                    <a href="#" class="btn btn-dark" role="button" aria-pressed="true">Table Reservation</a>
+                    <a href="https://wolt.com/en" target="_blank" class="btn btn-dark" role="button" aria-pressed="true">Wolt Delivery</a>
+                    <a href="reservation.php" class="btn btn-dark" role="button" aria-pressed="true">Table Reservation</a>
                 </div>
               </div>
 

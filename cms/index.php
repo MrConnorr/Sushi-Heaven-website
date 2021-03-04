@@ -11,6 +11,7 @@
     <a class="btn btn-info" href="adminMenu.php">Menu Management</a>
     <a class="btn btn-info" href="adminComments.php">Comments Management</a>
     <a class="btn btn-info" href="adminMain.php">Main Page Management</a>
+    <a class="btn btn-info" href="adminReservations.php">Reservations Management</a>
     </div>
 
   </body>
