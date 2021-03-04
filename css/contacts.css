@@ -1,6 +1,8 @@
 /* About Us section */
 
-#aboutUsBg {
+
+#aboutUsBg
+{
     position: relative;
     /* z-index: 1; */
     margin-top: 30px;
@@ -13,7 +15,9 @@
     font-size: 40px;
     text-align: center;
 }
-#aboutUsBg::after{
+
+#aboutUsBg::after
+{
     content: "";
     z-index: 0;
     position: absolute;
@@ -23,11 +27,20 @@
     left: 0;
     top: 0;
 }
+
 .text-center{
     z-index: 1;
     text-align: center;
-    color:#FFE817;
+    color: black;
 }
+
+.text-center-lrn{
+    z-index: 1;
+    text-align: center;
+    color: #FFE817;
+}
+
+
 #blackLayer {
     width: 100%;
     height: 100%;
@@ -37,19 +50,18 @@
     justify-content: center;
 }
 
-#info {
-    height: 350px !important;
-}
-.myRow {
-    width: 100%;
-    height: auto;
-    margin-bottom: 30px;
-}
 
-.icon i {
+i
+{
     color: #ECA61E;
-
 }
+
+.row
+{
+  margin: 20px;
+}
+
+
 
 /*
 .myRow {

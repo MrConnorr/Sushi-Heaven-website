@@ -30,9 +30,7 @@ $product = $dbHandle->getQuery("SELECT * FROM menu WHERE id='$a'");
     </form>
 
       <?php
-
-       $msg = "";
-
+      
       if(isset($_POST['submit']))
       {
         $pCode = $_POST['code'];

@@ -22,6 +22,11 @@
   width: 1920px;
 }
 
+.table-main
+{
+  width: 100% !important;
+}
+
 .controls
 {
   padding-bottom: 10px;

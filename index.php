@@ -51,20 +51,90 @@
 
           <article id="scroll-target">
             <div class="container">
+              <?php
+                $postsArray = $dbHandle->runQuery("SELECT * FROM maininfoposts ORDER BY id ASC");
+                if(!empty($postsArray))
+                {
+                  foreach ($postsArray as $key => $value)
+                  {
+                    if ($postsArray[$key]['imglocation'] == "left")
+                    {
+              ?>
               <div class="row info-restaurant">
                 <div class="col-lg-6">
-                  <h1>Sushi Heaven is about Sushi</h1>
+                  <h1><?php echo $postsArray[$key]['title']; ?></h1>
                   <p>
-                    "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"
+                  <?php echo $postsArray[$key]['description']; ?>
                   </p>
                 </div>
                 <div class="col-lg-6">
-                  <img src="images/restaurant-img.jpg" alt="Image of Restaurant inside" class="img-fluid">
+                  <img src="<?php echo $postsArray[$key]['image']; ?>" alt="<?php echo $postsArray[$key]['imageAlt']; ?>" class="img-fluid">
                 </div>
               </div>
+              <?php
+            } else if ($postsArray[$key]['imglocation'] == "right")
+            {
+          ?>
+          <div class="row info-restaurant">
+            <div class="col-lg-6">
+              <img src="<?php echo $postsArray[$key]['image']; ?>" alt="<?php echo $postsArray[$key]['imageAlt']; ?>" class="img-fluid">
+            </div>
+            <div class="col-lg-6">
+              <h1><?php echo $postsArray[$key]['title']; ?></h1>
+              <p>
+              <?php echo $postsArray[$key]['description']; ?>
+              </p>
+            </div>
+          </div>
+          <?php
+        } else if ($postsArray[$key]['imglocation'] == "up")
+        {
+          ?>
+          <div class="row info-restaurant">
+            <div class="col-lg-12">
+              <img src="<?php echo $postsArray[$key]['image']; ?>" alt="<?php echo $postsArray[$key]['imageAlt']; ?>" class="img-fluid">
+            </div>
+            <div class="col-lg-12">
+              <h1><?php echo $postsArray[$key]['title']; ?></h1>
+              <p>
+              <?php echo $postsArray[$key]['description']; ?>
+              </p>
+            </div>
+          </div>
+          <?php
+        } else if ($postsArray[$key]['imglocation'] == "down")
+        {
+          ?>
+          <div class="row info-restaurant">
+            <div class="col-lg-12">
+              <h1><?php echo $postsArray[$key]['title']; ?></h1>
+              <p>
+              <?php echo $postsArray[$key]['description']; ?>
+              </p>
+            </div>
+            <div class="col-lg-12">
+              <img src="<?php echo $postsArray[$key]['image']; ?>" alt="<?php echo $postsArray[$key]['imageAlt']; ?>" class="img-fluid">
+            </div>
+          </div>
+          <?php
+        } else if ($postsArray[$key]['imglocation'] == "none")
+        {
+          ?>
+          <div class="row info-restaurant">
+            <div class="col-lg-12">
+              <h1><?php echo $postsArray[$key]['title']; ?></h1>
+              <p>
+              <?php echo $postsArray[$key]['description']; ?>
+              </p>
+            </div>
+          </div>
+            <?php
+                }
+              }
+            }
+            ?>
             </div>
           </article>
-
 
           <div class="general-info">
             <div class="container">
