@@ -2,12 +2,15 @@
 
 <link rel="stylesheet" href="css/contacts.css">
 
+
+  <div class="container-fullwidth container-main">
+
         <div class="container-fluid p-0 mb-5">
             <div id="aboutUs">
                 <div id="aboutUsBg">
                     <div id="blackLayer">
                         <div class="row d-flex align-items-end justify-content-center">
-                            <h1 class="text-center col-lg-12">
+                            <h1 class="text-center-lrn col-lg-12">
                                 LEARN MORE ABOUT US
                             </h1>
                             <a href="#" class="col-lg-12 brand-text" style="z-index:1; width: fit-content; font-size: 30px; text-decoration: none;">
@@ -18,6 +21,7 @@
 
                     </div>
                 </div>
+
                 <div id="informationsAboutUs">
                     <div class="container-fluid pl-5">
                         <div class="row mt-5 ">
@@ -26,46 +30,28 @@
                                     width="100%" height="500px" frameborder="0" style="border: 1px solid #111; border-radius: 10px;" tabindex="0"></iframe>
 
                             </div>
-                            <div class="col-md-4 align-items-center">
-                                <div class="myRow">
+
+                            <div class="col-md-2">
                                     <div class="row">
-                                    <div class="icon col-md-2 mt-3" style="margin-top: 10px">
-                                        <i class="fas fa-map-marker-alt fa-3x"></i>
-                                    </div>
-                                    <div class="content col-md-10">
-                                        <h2 style="font-weight: 600;">Our Location:</h2>
+                                        <i class="fa fa-map-marker-alt fa-3x"></i> <h2 style="font-weight: 600;">Our Location:</h2>
                                         <p>Eteläranta 20, 00130 Helsinki, Finland</p>
                                     </div>
-                                    </div>
-                                </div>
-                                <div class="myRow">
                                     <div class="row">
-                                    <div class="icon col-md-2" style="margin-top: 10px">
-                                        <i class="fas fa-mobile-alt fa-3x"></i>
-                                    </div>
-                                    <div class="col-md-10 content">
-                                        <h2 style="font-weight: 600;">Call:</h2>
+                                      <i class="fa fa-mobile-alt fa-3x"></i> <h2 style="font-weight: 600;">Call:</h2>
                                         <p>+358 40210 67 95</p>
 
                                     </div>
-                                    </div>
-                                </div>
-                                <div class="myRow">
                                     <div class="row">
-                                    <div class="icon col-md-2" style="margin-top: 10px">
-                                        <i class="far fa-envelope fa-3x"></i>
-                                    </div>
-                                    <div class="col-md-10 content">
-                                        <h2 style="font-weight: 600;">Email:</h2>
+                                    <i class="fa fa-envelope fa-3x"></i> <h2 style="font-weight: 600;">Email:</h2>
                                         <p>hello@sushiheaven.fi</p>
                                     </div>
-                                    </div>
-                                </div>
+
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+
             <div id="contactMe" style="margin-top: 50px;">
                 <div class="container">
                     <div class="row">
@@ -92,5 +78,6 @@
                 </div>
             </div>
         </div>
+      </div>
 
 <?php include 'footer.php' ?>
