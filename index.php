@@ -174,11 +174,18 @@
             <div class="partners">
                 <h3>Our Partners</h3>
                 <div class="container">
-                  <li><img src="images/partner-img1.jpg" alt="Wolt Partner Image" class="img-fluid"></li>
-                  <li><img src="images/partner-img2.jpg" alt="Hotel Partner Image" class="img-fluid"></li>
-                  <li><img src="images/partner-img3.jpg" alt="Spa Partner Image" class="img-fluid"></li>
-                  <li><img src="images/partner-img4.jpg" alt="Fishin Company Partner Image" class="img-fluid"></li>
-                  <li><img src="images/partner-img5.jpg" alt="Sports Center Partner Image" class="img-fluid"></li>
+                <?php
+                  $partnersArray = $dbHandle->runQuery("SELECT * FROM partners ORDER BY id ASC");
+                  if(!empty($partnersArray))
+                  {
+                    foreach ($partnersArray as $key => $value)
+                    {
+                  ?>
+                    <li><img src="<?php echo $partnersArray[$key]['image']; ?>" alt="<?php echo $partnersArray[$key]['imageAlt']; ?>" class="img-fluid"></li>
+                    <?php
+                    }
+                    }
+                    ?>
               </div>
             </div>
 
