@@ -4,7 +4,6 @@
  $imgSlider = $dbHandle->getQuery("SELECT * FROM imgslider");
  $imgSliderArray = $dbHandle->runQuery("SELECT * FROM imgslider WHERE imgslidernum >= 1");
  $postsArray = $dbHandle->runQuery("SELECT * FROM maininfoposts ORDER BY id ASC");
- $commentArray = $dbHandle->runQuery("SELECT * FROM comments ORDER BY RAND() LIMIT 1;");
  $welcometxt = $dbHandle->getQuery("SELECT * FROM welcometxt");
  $partnersArray = $dbHandle->runQuery("SELECT * FROM partners ORDER BY id ASC");
  $generalInfoArray = $dbHandle->runQuery("SELECT * FROM generalinfo ORDER BY id ASC");
@@ -212,6 +211,7 @@
                   <div class="col-md-4 cmnt">
                     <div class="commentfield">
                     <?php
+                    $commentArray = $dbHandle->runQuery("SELECT * FROM comments ORDER BY RAND() LIMIT 1;");
                     if(!empty($commentArray))
                     {
                       foreach ($commentArray as $key => $value)
@@ -253,6 +253,7 @@
                   <div class="col-md-4 cmnt">
                   <div class="commentfield">
                   <?php
+                    $commentArray = $dbHandle->runQuery("SELECT * FROM comments ORDER BY RAND() LIMIT 1;");
                     if(!empty($commentArray))
                     {
                       foreach ($commentArray as $key => $value)
