@@ -135,6 +135,7 @@
     display: flex;
 }
 
+
 @media screen and (max-width: 575px) {
     .menu-img {
         margin-left: auto;
@@ -160,7 +161,8 @@
 .cart-item-image
 {
   border-radius: 10px;
-  float: left;
+  width: 166px;
+  height: 110px;
 }
 
 .cart-name
@@ -173,7 +175,7 @@
     border-radius: 10px;
     display: flex;
     vertical-align: middle;
-    max-width: 100%;
+    width: 166px;
     height: 110px;
 }
 
@@ -189,16 +191,6 @@
     padding-right: 40px;
 }
 
-.productQuantity
-{
-  width: 50px;
-}
-
-.btnAdd
-{
-  width: 150px !important;
-  font-size: 20px !important;
-}
 
 .form
 {

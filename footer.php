@@ -7,7 +7,7 @@
         <p>
           Sushi Heaven <br>
           Street 123 13916 Tallinn <br>
-          <a href="mailto: sushiheaven@gmail.com">sushiheaven@gmail.com</a> <br>
+          <a href="mailto: sushiheaven@gmail.com">sushiheavenhelp@gmail.com</a> <br>
           Tel. +37256842682
         </p>
       </address>

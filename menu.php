@@ -125,17 +125,19 @@
                             <img src="<?php echo $productArray[$key]["image"]; ?>" alt="<?php echo $productArray[$key]["name"]; ?>" class="menu-img">
                         </div>
                         <div class="col-sm-6 menu-text">
-                            <p><?php echo $productArray[$key]["name"] ?><br>
-                            <?php echo $productArray[$key]["description"] ?> <br>
-                            <?php echo $productArray[$key]["price"]. "€" ?>
+                            <p><?php echo $productArray[$key]["name"]; ?><br>
+                            <?php echo $productArray[$key]["description"]; ?> <br>
+                            <?php echo $productArray[$key]["price"]. "€"; ?>
                           </p>
                         </div>
                         <form  class="form" action="menu.php?action=add&code=<?php echo $productArray[$key]['code']; ?>" method="post">
-                        <input type="hidden" name="code" value="<?php echo $productArray[$key]['code'] ?>">
-                        <input type="number" name="quantity" value="1" min="1" class="productQuantity" />
-                        <input type="submit" value="Add To Cart" class="btnAdd btn-dark" />
+                        <input type="hidden" name="code" value="<?php echo $productArray[$key]['code']; ?>">
+                        </div>
+                        <div class="quantityAndBtn">
+                        <input type="number" name="quantity" value="1" min="1" class="productQuantity" /> <br>
+                        <input type="submit" value="Add To Cart" class="btnAdd btn-dark"/>
+                        </div>
                       </form>
-                    </div>
                     <?php
                       }
                     }
@@ -172,14 +174,16 @@
 
                   <a id="btnEmpty" class="btn-dark" href="menu.php?action=empty">Empty Cart</a>
 
-                  <table class="tbl-cart" cellpadding="10" cellspacing="1">
+                  <div class="table-responsive">
+                  <table class="table table-bordered">
                   <tbody>
                   <tr>
-                  <th style="text-align:center;">Name</th>
-                  <th style="text-align:right;" width="5%">Quantity</th>
-                  <th style="text-align:right;" width="10%">Unit Price</th>
-                  <th style="text-align:right;" width="10%">Price</th>
-                  <th style="text-align:center;" width="5%">Remove</th>
+                  <th></th>
+                  <th width="30%">Name</th>
+                  <th width="5%">Quantity</th>
+                  <th>Unit Price</th>
+                  <th>Price</th>
+                  <th>Remove</th>
                   </tr>
 
                   <?php
@@ -187,12 +191,13 @@
                           $item_price = $item["quantity"]*$item["price"];
                       ?>
                           <tr>
-                          <td><img src="<?php echo $item["image"]; ?>" class="cart-item-image" /><p class="cart-name"><?php echo $item["name"]; ?></p></td>
+                          <td ><img src="<?php echo $item["image"]; ?>" class="cart-item-image" /></td>
+                          <td><?php echo $item["name"]; ?></td>
                           <form class="" action="menu.php?action=update&code=<?php echo $item["code"]; ?>" method="post">
-                          <td style="text-align:right;"><input type="number" name="quantity" value="<?php echo $item["quantity"]; ?>" min="1" class="productQuantity" /></td>
-                        </form>
-                          <td  style="text-align:right;"><?php echo $item["price"]. "€"; ?></td>
-                          <td  style="text-align:right;"><?php echo number_format($item_price,2). "€"; ?></td>
+                          <td style="text-align:center;"><input type="number" name="quantity" value="<?php echo $item["quantity"]; ?>" min="1" class="productQuantity" /></td>
+                          </form>
+                          <td style="text-align:center;"><?php echo $item["price"]. "€"; ?></td>
+                          <td  style="text-align:center;"><?php echo number_format($item_price,2). "€"; ?></td>
                           <td style="text-align:center;"><a href="menu.php?action=remove&code=<?php echo $item["code"]; ?>" class="btnRemoveAction"><img src="images/icon-delete.png" alt="Remove Item" /></a></td>
                           </tr>
                           <?php
@@ -208,6 +213,7 @@
                   </tr>
                   </tbody>
                   </table>
+                  </div>
                   <?php
                   }
                   ?>

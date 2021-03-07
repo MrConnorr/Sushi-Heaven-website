@@ -12,6 +12,7 @@ $comment = $dbHandle->getQuery("SELECT * FROM comments WHERE id= '$a'");
 <title>Delete Data</title>
 </head>
 <body>
+<div class="container">
 <form method="post" action="">
 <div><?php if(isset($message)) { echo $message; } ?>
 </div>
@@ -27,6 +28,7 @@ User Email:<br>
 
 <input type="submit" name="submit" value="Delete" >
 </form>
+</div>
 <?php
 if(isset($_POST['submit'])){
 

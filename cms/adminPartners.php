@@ -2,7 +2,7 @@
 
 
 <div class="controls">
-<a href="index.php"><img src="../images/back.png" alt="" style="width:50px"></a>
+<a href="adminMain.php"><img src="../images/back.png" alt="" style="width:50px"></a>
 <a href="addNewPartner.php" class="btn btn-info">Add New Partner</a>
 </div>
 
@@ -39,6 +39,7 @@ if(!empty($menu))
     <title>Partner Management</title>
   </head>
   <body>
+    <div class="table-responsive">
     <table class="table table-bordered">
       <tr>
         <th>ID</th>
@@ -50,12 +51,13 @@ if(!empty($menu))
 
       <tr>
         <td><?php echo $menu[$key]["id"]; ?></td>
-        <td><img style="display:block;" width="100%" height="100%" src="../<?php echo $menu[$key]["image"]; ?>" alt=""></td>
+        <td><img src="../<?php echo $menu[$key]["image"]; ?>" alt="" class="img-fluid"></td>
         <td style="white-space: pre-wrap;"><?php echo $menu[$key]["imageAlt"]; ?></td>
         <td><a href="updateSinglePartner.php?id=<?php echo $menu[$key]["id"]; ?>">Update</a></td>
-        <td><a href="adminPartners.php?action=delete&id=<?php echo $menu[$key]["id"]; ?>" onclick="return confirm('Are you sure you want to delete this product?')">Delete</a></td>
+        <td><a href="adminPartners.php?action=delete&id=<?php echo $menu[$key]["id"]; ?>" onclick="return confirm('Are you sure you want to delete this partner?')">Delete</a></td>
       </tr>
     </table>
+  </div>
 
     <?php
       }

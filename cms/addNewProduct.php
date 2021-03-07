@@ -9,19 +9,21 @@
      <title>Add New Product</title>
    </head>
    <body>
+     <div class="container">
      <form class="" action="addNewProduct.php" method="post" enctype="multipart/form-data">
      Product Code:<br>
      <input type="text" name="code" value="" required><br>
      Product Name:<br>
      <input type="text" name="name" value="" required><br>
      Product Description:<br>
-     <textarea type="text" name="description" style="text-align:left;" required></textarea><br>
+     <textarea type="text" name="description" style="text-align:left;" rows="10" required></textarea><br>
      Product Price:<br>
      <input type="number" step="0.01" name="price" value="" required>€<br>
      Product Image:<br>
      <input type="file" name="image" accept="image/*"> <br>
      <input type="submit" name="submit" value="Save Data" >
     </form>
+    </div>
 
     <?php
     if ($_SERVER['REQUEST_METHOD'] === 'POST')

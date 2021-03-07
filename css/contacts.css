@@ -1,5 +1,10 @@
 /* About Us section */
 
+html,body{
+    overflow-x: hidden;
+}
+
+
 
 #aboutUsBg
 {
@@ -56,12 +61,6 @@ i
     color: #ECA61E;
 }
 
-.row
-{
-  margin: 20px;
-}
-
-
 
 /*
 .myRow {
@@ -105,25 +104,9 @@ i
     text-decoration: none;
     background-color: #000;
     color: #FFE817;
-    transition: all .4s linear;
+
 }
 
 .submitButton:hover {
     color: #FFE817;
-    transform: translateY(-5px);
-}
-
-@media screen and (max-width: 500px) {
-    #mapFinland {
-        margin-left: 0 !important;
-        margin-right: 0 !important;
-    }
-    #informationsAboutUs,
-    #mapFinland,
-    #info {
-        width: 100%;
-    }
-    #informationsAboutUs {
-        margin-bottom: 100px;
-    }
 }

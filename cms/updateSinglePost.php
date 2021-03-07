@@ -5,7 +5,7 @@ $a = $_GET["id"];
 $post = $dbHandle->getQuery("SELECT * FROM maininfoposts WHERE id='$a'");
  ?>
 
- <a href="adminMain.php"><img src="../images/back.png" alt="" style="width:50px"></a>
+ <a href="postsMain.php"><img src="../images/back.png" alt="" style="width:50px"></a>
 
  <!DOCTYPE html>
  <html lang="en" dir="ltr">
@@ -14,15 +14,16 @@ $post = $dbHandle->getQuery("SELECT * FROM maininfoposts WHERE id='$a'");
      <title>Update <?php echo $post["title"]; ?></title>
    </head>
    <body>
+     <div class="container">
      <form class="" method="post" enctype="multipart/form-data">
      Post Title:<br>
      <input type="text" name="title" value="<?php echo $post["title"] ?>" required><br>
      Post Description:<br>
-     <textarea type="text" name="description" required><?php echo $post["description"] ?></textarea><br>
+     <textarea type="text" name="description" rows="10" required><?php echo $post["description"] ?></textarea><br>
      Alt Image:<br>
      <input type="text" name="altimg" value="<?php echo $post['imageAlt'] ?>"> <br>
      Post Image:<br>
-     <img src="<?php echo "../".$post["image"] ?>" alt=""> <br>
+     <img src="<?php echo "../".$post["image"] ?>" alt="" style="width:50%;"> <br>
      <input type="file" name="image" accept="image/*"> <br>
      Image Location: <br>
      <select name="imglocation" required>
@@ -35,6 +36,7 @@ $post = $dbHandle->getQuery("SELECT * FROM maininfoposts WHERE id='$a'");
     </select>
      <input type="submit" name="submit" value="Save Data" >
     </form>
+    </div>
 
       <?php
 

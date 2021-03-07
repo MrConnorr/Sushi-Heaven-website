@@ -16,7 +16,7 @@ $dbHandle = new DBController();
 
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
         integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
-    
+
 
     <title>Sushi Heaven</title>
 
@@ -43,6 +43,20 @@ $dbHandle = new DBController();
       }
     </script>
 
+    <?php function activeNavLink($activeLink)
+    {
+
+      if(basename($_SERVER['PHP_SELF']) == $activeLink)
+      {
+        echo "";
+      } else
+      {
+        echo "non-active";
+      }
+
+    }
+    ?>
+
           <!-- Navbar Starts Here -->
         <nav class="navbar-flex sticky-top">
           <a href="index.php" class="brand-text">
@@ -58,15 +72,10 @@ $dbHandle = new DBController();
 
           <div id="hidden-menu">
           <ul>
-            <li><a href="index.php">Home</a></li>
-            <li><a class="non-active" id="menu" href="menu.php">Menu</a></li>
-            <li><a class="non-active" href="contacts.php">Contacts</a></li>
+            <li><a href="index.php" class="<?php activeNavLink("index.php"); ?>">Home</a></li>
+            <li><a class="<?php activeNavLink("menu.php"); ?>" href="menu.php">Menu</a></li>
+            <li><a class="<?php activeNavLink("contacts.php"); ?>" href="contacts.php">Contacts</a></li>
           </ul>
-
-          <div class="lang-selector">
-          <a href="index.php" class="lang-links"><img src="images/uk-icon.png" alt="UK LANGUAGE ICON" class="lang-icons img-fluid"></a>
-          <a href="#" class="lang-links unactive"><img src="images/ru-icon.png" alt="RU LANGUAGE ICON" class="lang-icons img-fluid"></a>
-          </div>
 
           </div>
         </nav>

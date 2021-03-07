@@ -39,6 +39,7 @@ if(!empty($menu))
     <title>Menu Management</title>
   </head>
   <body>
+    <div class="table-responsive">
     <table class="table table-bordered">
       <tr>
         <th>ID</th>
@@ -57,11 +58,12 @@ if(!empty($menu))
         <td><?php echo $menu[$key]["name"]; ?></td>
         <td style="white-space: pre-wrap;"><?php echo $menu[$key]["description"]; ?></td>
         <td><?php echo $menu[$key]["price"]. "€"; ?></td>
-        <td><img src="../<?php echo $menu[$key]["image"]; ?>" alt=""></td>
+        <td><img src="../<?php echo $menu[$key]["image"]; ?>" alt="" class="img-fluid"></td>
         <td><a href="updateSingleMenu.php?id=<?php echo $menu[$key]["id"]; ?>">Update</a></td>
         <td><a href="adminMenu.php?action=delete&id=<?php echo $menu[$key]["id"]; ?>" onclick="return confirm('Are you sure you want to delete this product?')">Delete</a></td>
       </tr>
     </table>
+  </div>
 
     <?php
       }

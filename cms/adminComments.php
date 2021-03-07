@@ -12,7 +12,8 @@
 </head>
 <body>
 <hr>
-<table border="1" cellpadding="5">
+<div class="table-responsive">
+<table class="table table-bordered">
 <tr>
 <th>ID</th><th>Comment</th><th>Name</th><th>Email</th><th>Edit</th><th>Delete</th>
 </tr>
@@ -41,5 +42,6 @@ else
 }
 ?>
 </table>
+</div>
 </body>
 </html>

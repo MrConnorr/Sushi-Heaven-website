@@ -1,37 +1,59 @@
+<?php
+ include 'header.php';
 
-<?php include 'header.php' ?>
+ $imgSlider = $dbHandle->getQuery("SELECT * FROM imgslider");
+ $imgSliderArray = $dbHandle->runQuery("SELECT * FROM imgslider WHERE imgslidernum >= 1");
+ $postsArray = $dbHandle->runQuery("SELECT * FROM maininfoposts ORDER BY id ASC");
+ $commentArray = $dbHandle->runQuery("SELECT * FROM comments ORDER BY RAND() LIMIT 1;");
+ $welcometxt = $dbHandle->getQuery("SELECT * FROM welcometxt");
+ $partnersArray = $dbHandle->runQuery("SELECT * FROM partners ORDER BY id ASC");
+ $generalInfoArray = $dbHandle->runQuery("SELECT * FROM generalinfo ORDER BY id ASC");
+
+ ?>
       <div class="img-slider">
 
         <div class="welcome">
-          <h1>Welcome to Sushi Heaven</h1>
-          <p>Best sushi in town made with love</p>
-          <a href="#scroll-target" type="button" class="btn">Learn More</a>
+          <h1><?php echo $welcometxt['slidertitletxt']; ?></h1>
+          <p><?php echo $welcometxt['sliderwelcometxt']; ?></p>
+          <a href="#scroll-target" type="button" class="btn"><?php echo $welcometxt['sliderbuttontxt']; ?></a>
         </div>
 
         <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
           <ol class="carousel-indicators">
-            <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"></li>
-            <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"></li>
-            <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"></li>
-            <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"></li>
-            <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4"></li>
+
+            <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="<?php echo $imgSlider['imgslidernum']; ?>" class="active"></li>
+
+            <?php
+            if(!empty($imgSliderArray))
+            {
+              foreach ($imgSliderArray as $key => $value)
+              {
+             ?>
+            <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="<?php echo $imgSliderArray[$key]['imgslidernum']; ?>"></li>
+            <?php
+                }
+              }
+            ?>
           </ol>
           <div class="carousel-inner">
             <div class="carousel-item active">
-              <img src="images/slider-image1.jpg" class="d-block w-100 img-fluid" alt="Sushi Img For Slider 1">
+              <img src="<?php echo $imgSlider['image']; ?>" class="d-block w-100 img-fluid" alt="<?php echo $imgSlider['imagealt']; ?>">
             </div>
+
+            <?php
+            if(!empty($imgSliderArray))
+            {
+              foreach ($imgSliderArray as $key => $value)
+              {
+             ?>
             <div class="carousel-item">
-              <img src="images/slider-image2.jpg" class="d-block w-100 img-fluid" alt="Sushi Img For Slider 2">
+              <img src="<?php echo $imgSliderArray[$key]['image']; ?>" class="d-block w-100 img-fluid" alt="<?php echo $imgSliderArray[$key]['imagealt']; ?>">
             </div>
-            <div class="carousel-item">
-              <img src="images/slider-image3.jpg" class="d-block w-100 img-fluid" alt="Sushi Img For Slider 3">
-            </div>
-            <div class="carousel-item">
-              <img src="images/slider-image4.jpg" class="d-block w-100 img-fluid" alt="Sushi Img For Slider 4">
-            </div>
-            <div class="carousel-item">
-              <img src="images/slider-image5.jpg" class="d-block w-100 img-fluid" alt="Sushi Img For Slider 5">
-            </div>
+            <?php
+                }
+              }
+            ?>
+
           </div>
           <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-bs-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -52,12 +74,11 @@
           <article id="scroll-target">
             <div class="container">
               <?php
-                $postsArray = $dbHandle->runQuery("SELECT * FROM maininfoposts ORDER BY id ASC");
                 if(!empty($postsArray))
                 {
                   foreach ($postsArray as $key => $value)
                   {
-                    if ($postsArray[$key]['imglocation'] == "left")
+                    if ($postsArray[$key]['imglocation'] == "right")
                     {
               ?>
               <div class="row info-restaurant">
@@ -72,7 +93,7 @@
                 </div>
               </div>
               <?php
-            } else if ($postsArray[$key]['imglocation'] == "right")
+            } else if ($postsArray[$key]['imglocation'] == "left")
             {
           ?>
           <div class="row info-restaurant">
@@ -139,34 +160,31 @@
           <div class="general-info">
             <div class="container">
               <div class="row">
+                <?php
+                if(!empty($generalInfoArray))
+                {
+                  foreach ($generalInfoArray as $key => $value)
+                  {
+                 ?>
                 <div class="col-md-6">
-                  <h2>Buffet</h2>
+                  <h2><?php echo $generalInfoArray[$key]['title']; ?></h2>
                   <p>
-                    Info about buffet
-                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-                  </p>
-                  <img src="images/opening-icon.png" alt="Icon for Opening Hours" class="img-fluids">
-                  <p class="hours-info">
-                    Opening Hours <br>
-                    Mon-Fri: 09:00 - 21:00 <br>
-                    Sat: 11:00 - 23:00 <br>
-                    Sun: Closed
+                    <?php echo $generalInfoArray[$key]['description']; ?>
+                    <?php if($generalInfoArray[$key]['image'] != "images/")
+                    {
+                    ?>
+                  <img src="<?php echo $generalInfoArray[$key]['image']; ?>" alt="" class="img-fluids">
+                  <?php
+                    }
+                   ?>
+                  <p class="hours-info" style="white-space: pre-line;">
+                    <?php echo $generalInfoArray[$key]['otherinfo']; ?>
                   </p>
                 </div>
-                <div class="col-md-6">
-                  <h2>Delivery</h2>
-                  <p>
-                    Info about delivery
-                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-                  </p>
-                  <img src="images/delivery-icon.png" alt="Delivery Icon" class="img-fluid">
-                  <p class="hours-info">
-                    Delivery working Hours <br>
-                    Mon-Fri: 10:00 - 20:00 <br>
-                    Sat: 12 :00 - 22:00 <br>
-                    Sun: Closed
-                  </p>
-                </div>
+                <?php
+                    }
+                  }
+                 ?>
               </div>
             </div>
           </div>
@@ -175,7 +193,6 @@
                 <h3>Our Partners</h3>
                 <div class="container">
                 <?php
-                  $partnersArray = $dbHandle->runQuery("SELECT * FROM partners ORDER BY id ASC");
                   if(!empty($partnersArray))
                   {
                     foreach ($partnersArray as $key => $value)
@@ -195,7 +212,6 @@
                   <div class="col-md-4 cmnt">
                     <div class="commentfield">
                     <?php
-                    $commentArray = $dbHandle->runQuery("SELECT * FROM comments ORDER BY RAND() LIMIT 1;");
                     if(!empty($commentArray))
                     {
                       foreach ($commentArray as $key => $value)
@@ -237,7 +253,6 @@
                   <div class="col-md-4 cmnt">
                   <div class="commentfield">
                   <?php
-                    $commentArray = $dbHandle->runQuery("SELECT * FROM comments ORDER BY RAND() LIMIT 1;");
                     if(!empty($commentArray))
                     {
                       foreach ($commentArray as $key => $value)

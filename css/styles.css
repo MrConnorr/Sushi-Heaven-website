@@ -170,11 +170,11 @@ body::after
   display: block;
   margin-left: auto;
   margin-right: auto;
+  margin-top: 15px;
 }
 
 .general-info .hours-info
 {
-  margin-top: 5px;
   text-align: center !important;
   font-size: 18px;
 }
@@ -197,7 +197,7 @@ body::after
 .partners img
 {
   width: 220px;
-  height: auto;
+  height: 123.2px;
 
   align-self: flex-start;
 
@@ -226,7 +226,23 @@ body::after
   margin-top: 30px;
 }
 
+.btnAdd
+{
+  width: 150px !important;
+  font-size: 20px !important;
+}
 
+.quantityAndBtn
+{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.productQuantity
+{
+  width: 50px;
+}
 
 
 @media all and (min-width: 960px)
@@ -411,6 +427,21 @@ footer .social-media-icons
 
 .comments {
   margin-top: 150px !important;
+}
+
+.quantityAndBtn
+{
+  align-items: flex-end;
+}
+
+.btnAdd
+{
+  margin-right: 60px;
+}
+
+.productQuantity
+{
+  margin-right: 110px;
 }
 
 }

@@ -1,6 +1,6 @@
 <?php include 'db.php' ?>
 
- <a href="adminMain.php"><img src="../images/back.png" alt="" style="width:50px"></a>
+ <a href="postsMain.php"><img src="../images/back.png" alt="" style="width:50px"></a>
 
  <!DOCTYPE html>
  <html lang="en" dir="ltr">
@@ -9,11 +9,12 @@
      <title>Add New Post</title>
    </head>
    <body>
+     <div class="container">
      <form class="" method="post" enctype="multipart/form-data">
      Post Title:<br>
      <input type="text" name="title" value="" required><br>
      Post Description:<br>
-     <textarea type="text" name="description" required></textarea><br>
+     <textarea type="text" name="description" rows="10" required></textarea><br>
      Alt Image:<br>
      <input type="text" name="altimg" value=""> <br>
      Post Image:<br>
@@ -30,6 +31,7 @@
     </select>
      <input type="submit" name="submit" value="Save Data" >
     </form>
+    </div>
 
     <?php
     if ($_SERVER['REQUEST_METHOD'] === 'POST')
