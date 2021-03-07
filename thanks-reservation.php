@@ -1,5 +1,14 @@
 <?php include 'header.php' ?>
-
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.message {
+  margin-top:30px;
+}
+</style>
+</head>
+<body>
 <div class="container-fullwidth container-main">
 
 <div class="message">
@@ -10,5 +19,6 @@
 </div>
 
 </div>
-
+</body>
+</html>
 <?php include 'footer.php'; ?>
