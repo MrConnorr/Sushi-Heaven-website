@@ -9,6 +9,7 @@
      <title>Add New Partner</title>
    </head>
    <body>
+     <div class="container">
      <form class="" action="addNewPartner.php" method="post" enctype="multipart/form-data">
      Partner Image:<br>
      <input type="file" name="image" accept="image/*"> <br>
@@ -16,6 +17,7 @@
      <input type="text" name="imageAlt" value="" required><br>
      <input type="submit" name="submit" value="Save Data" >
     </form>
+    </div>
 
     <?php
     if ($_SERVER['REQUEST_METHOD'] === 'POST')

@@ -17,6 +17,6 @@
         <a class="btn btn-info" href="adminMain.php">Main Page Management</a>
         <a class="btn btn-info" href="adminReservations.php">Reservations Management</a>
         </div>
-        
+
   </body>
 </html>
